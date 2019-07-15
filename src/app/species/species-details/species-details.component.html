@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<br>
+<div class="container">
+    <img [src]="'assets/species/' + species.name + '.jpg'" onerror="this.src='assets/no_image2.jpg';"/>
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>{{species.name | uppercase}}'s details</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <td>Classification</td>
+                    <td>{{species.classification}}</td>
+                </tr>
+                <tr>
+                    <td>Designation</td>
+                    <td>{{species.designation}}</td>
+                </tr>
+                <tr>
+                    <td>Homeworld</td>
+                    <td>{{species.homeworld | speciespipe}}</td>
+                </tr>
+                <tr>
+                    <td>Language</td>
+                    <td>{{species.language}}</td>
+                </tr>
+                <tr>
+                    <td>Average Lifespan</td>
+                    <td>{{species.average_lifespan}}</td>
+                </tr>
+                <tr>
+                    <td>Hair color</td>
+                    <td>{{species.hair_colors}}</td>
+                </tr>
+                <tr>
+                    <td>Skin color</td>
+                    <td>{{species.skin_colors}}</td>
+                </tr>
+                <tr>
+                    <td>Eye color</td>
+                    <td>{{species.eye_colors}}</td>
+                </tr>
+                <tr>
+                    <td>People</td>
+                    <td>{{species.people | speciespipe}}</td>
+                </tr>
+                <tr>
+                    <td>Films</td>
+                    <td>{{species.films}}</td>
+                </tr>
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<!--
+
+    <h3>{{species.name | uppercase}}'s details</h3>
+<div class="container">
+    <h3>{{species.name | uppercase}}'s details</h3>
+    <h5>Classification: {{species.classification}}</h5>
+    <h5>Designation: {{species.designation}}</h5>
+    <h5>Homeworld: {{species.homeworld}}</h5>
+    <h5>Language: {{species.language}}</h5>
+    <h5>Average Lifespan: {{species.average_lifespan}}</h5>
+    <h5>Hair color: {{species.hair_colors}}</h5>
+    <h5>Skin color: {{species.skin_colors}}</h5>
+    <h5>Eye color: {{species.eye_colors}}</h5>
+    <h5>People: {{species.people}}</h5>
+    <h5>Films: {{species.films}}</h5>
+</div>
+-->

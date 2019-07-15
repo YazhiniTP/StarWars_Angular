@@ -1,0 +1,42 @@
+<div class="titleWrap">
+    <div>
+        <button mat-raised-button color="accent" (click)=toggleHide() class="listButton">
+            <mat-icon class="listIcon">list</mat-icon>&nbsp;&nbsp;Films
+        </button>
+    </div>
+    <div class="pagNav">
+        <button mat-raised-button color="primary" (click)=goPrev()>
+            <mat-icon>arrow_back_ios</mat-icon>
+        </button>
+        &nbsp;
+        <button mat-raised-button color="primary" (click)=goNext()>
+            <mat-icon>arrow_forward_ios</mat-icon>
+        </button>
+    </div>
+</div>
+<br>
+
+<div class="cardList">
+    <ng-container *ngIf="show">
+        <div *ngFor="let film of allFilms" [ngClass]="{'selected': film === selectedFilm}"
+            (click)="select(film);toggleShow()">
+            <mat-card class="card">
+                <img mat-card-image [src]="'assets/films/' + film.episode_id + '.jpg'" height="300px"
+                    onerror="this.src='assets/no_image2.jpg';">
+                <mat-card-content>
+                    <h2>{{film.title}}</h2>
+                </mat-card-content>
+            </mat-card>
+            <br>
+            <br>
+        </div>
+    </ng-container>
+</div>
+
+
+<ng-container *ngIf="hide">
+    <div *ngIf="selectedFilm">
+        <app-film-details [film]="selectedFilm">
+        </app-film-details>
+    </div>
+</ng-container>

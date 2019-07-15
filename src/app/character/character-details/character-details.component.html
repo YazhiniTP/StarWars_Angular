@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<br>
+<div class="container">
+    <img [src]="'assets/characters/' + character.name + '.jpg'" onerror="this.src='assets/no_image2.jpg';" />
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>{{character.name | uppercase}}'s details</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <td>Birth Year</td>
+                    <td>{{character.birth_year}}</td>
+                </tr>
+                <tr>
+                    <td>Species</td>
+                    <td>{{character.species | characterspipe}}</td>
+                </tr>
+                <tr>
+                    <td>Homeworld</td>
+                    <td>{{character.homeworld | characterspipe}}</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>{{character.gender}}</td>
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td>{{character.height}}</td>
+                </tr>
+                <tr>
+                    <td>Mass</td>
+                    <td>{{character.mass}}</td>
+                </tr>
+                <tr>
+                    <td>Hair color</td>
+                    <td>{{character.hair_color}}</td>
+                </tr>
+                <tr>
+                    <td>Skin color</td>
+                    <td>{{character.skin_color}}</td>
+                </tr>
+                <tr>
+                    <td>Eye color</td>
+                    <td>{{character.eye_color}}</td>
+                </tr>
+                <tr>
+                    <td>Films</td>
+                    <td>{{character.films}}</td>
+                </tr>
+                <tr>
+                    <td>Vehicles</td>
+                    <td>{{character.vehicles}}</td>
+                </tr>
+                <tr>
+                    <td>Starships</td>
+                    <td>{{character.starships}}</td>
+                </tr>
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+
+
+<!--
+<div class="container">
+    <h3>{{character.name | uppercase}}'s details</h3>
+    <h5>Birth Year: {{character.birth_year}}</h5>
+    <h5>Species: {{character.species}}</h5>
+    <h5>Homeworld: {{character.homeworld}}</h5>
+    <h5>Gender: {{character.gender}}</h5>
+    <h5>Height: {{character.height}} & Mass: {{character.mass}}</h5>
+    <h5>Hair color: {{character.hair_color}}</h5>
+    <h5>Skin color: {{character.skin_color}}</h5>
+    <h5>Eye color: {{character.eye_color}}</h5>
+    <h5>Films: {{character.films}}</h5>
+    <h5>Vehicles: {{character.vehicles}}</h5>
+    <h5>Starships: {{character.starships}}</h5>
+</div>
+-->

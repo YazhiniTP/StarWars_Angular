@@ -1,0 +1,43 @@
+.pagNav {
+    display: flex;
+    justify-content: flex-end;
+    height: 45px;
+}
+
+.titleWrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.listButton {
+    font-size: 30px; 
+    font-family: "Matura MT Script Capitals";
+    padding: 7px 25px;    
+}
+
+.listIcon {
+    font-size: 44px; 
+    margin-bottom: 20px; 
+    margin-right: 15px;
+}
+
+.card {
+    max-width: 200px;
+    background-color: #000000;
+    font-family: "Goudy Old Style";
+}
+
+.cardList {   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.cardList > * {
+    box-sizing: border-box;
+}
+
+.cardList > *:not(:last-child) {
+    margin-right: 32px;
+}

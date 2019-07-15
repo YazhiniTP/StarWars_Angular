@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<br>
+<div class="container">
+    <img [src]="'assets/planets/' + planet.name + '.jpg'" onerror="this.src='assets/no_image2.jpg';" />
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>{{planet.name | uppercase}}'s details</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <td>Rotation period</td>
+                    <td>{{planet.rotation_period}}</td>
+                </tr>
+                <tr>
+                    <td>Orbital period</td>
+                    <td>{{planet.orbital_period}}</td>
+                </tr>
+                <tr>
+                    <td>Diameter</td>
+                    <td>{{planet.diameter}}</td>
+                </tr>
+                <tr>
+                    <td>Climate</td>
+                    <td>{{planet.climate}}</td>
+                </tr>
+                <tr>
+                    <td>Gravity</td>
+                    <td>{{planet.gravity}}</td>
+                </tr>
+                <tr>
+                    <td>Terrain</td>
+                    <td>{{planet.terrain}}</td>
+                </tr>
+                <tr>
+                    <td>Surface water</td>
+                    <td>{{planet.surface_water}}</td>
+                </tr>
+                <tr>
+                    <td>Population</td>
+                    <td>{{planet.population}}</td>
+                </tr>
+                <tr>
+                    <td>Residents</td>
+                    <td>{{planet.residents}}</td>
+                </tr>
+                <tr>
+                    <td>Films</td>
+                    <td>{{planet.films}}</td>
+                </tr>
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<!--
+<div class="container">
+    <h3>{{planet.name | uppercase}}'s details</h3>
+    <h5>Rotation period: {{planet.rotation_period}}</h5>
+    <h5>Orbital period: {{planet.orbital_period}}</h5>
+    <h5>Diameter: {{planet.diameter}}</h5>
+    <h5>Climate: {{planet.climate}}</h5>
+    <h5>Gravity: {{planet.gravity}}</h5>
+    <h5>Terrain: {{planet.terrain}}</h5>
+    <h5>Surface water: {{planet.surface_water}}</h5>
+    <h5>Population: {{planet.population}}</h5>
+    <h5>Residents: {{planet.residents}}</h5>
+    <h5>Films: {{planet.films}}</h5>
+</div>
+-->

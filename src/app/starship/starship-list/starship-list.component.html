@@ -1,0 +1,41 @@
+<div class="titleWrap">
+    <div>
+        <button mat-raised-button color="accent" (click)=toggleHide() class="listButton">
+            <mat-icon class="listIcon">list</mat-icon>&nbsp;&nbsp;Starships
+        </button>
+    </div>
+    <div class="pagNav">
+        <button mat-raised-button color="primary" (click)=goPrev()>
+            <mat-icon>arrow_back_ios</mat-icon>
+        </button>
+        &nbsp;
+        <button mat-raised-button color="primary" (click)=goNext()>
+            <mat-icon>arrow_forward_ios</mat-icon>
+        </button>
+    </div>
+</div>
+<br>
+
+<div class="cardList">
+    <ng-container *ngIf="show">
+        <div *ngFor="let starship of allStarships" [ngClass]="{'selected': starship === selectedStarship}"
+            (click)="select(starship);toggleShow()">
+            <mat-card class="card">
+                <img mat-card-image [src]="'assets/starships/' + starship.name + '.jpg'" height="250px"
+                    onerror="this.src='assets/no_image2.jpg';">
+                <mat-card-content>
+                    <h2>{{starship.name}}</h2>
+                </mat-card-content>
+            </mat-card>
+            <br>
+            <br>
+        </div>
+    </ng-container>
+</div>
+
+<ng-container *ngIf="hide">
+    <div *ngIf="selectedStarship">
+        <app-starship-details [starship]="selectedStarship">
+        </app-starship-details>
+    </div>
+</ng-container>

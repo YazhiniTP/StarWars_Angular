@@ -1,0 +1,21 @@
+.tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+a {
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: medium;
+    color: black;
+}
+
+.back-icon {
+    margin-left: 8px;
+}

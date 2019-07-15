@@ -1,0 +1,14 @@
+<div class="tabs">
+    <nav mat-tab-nav-bar color="primary">
+        <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive"
+            [active]="rla.isActive">
+            <mat-icon class="tab-icon">{{link.icon}}</mat-icon>
+            &nbsp;&nbsp;{{link.label | uppercase}}
+        </a>
+    </nav>
+    <div class="back">
+        <button mat-fab color="accent">
+            <mat-icon (click)="back()" class="back-icon">arrow_back_ios</mat-icon>
+        </button>
+    </div>
+</div>

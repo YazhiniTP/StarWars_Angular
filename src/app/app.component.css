@@ -1,0 +1,23 @@
+.surround {
+    padding: 10px;
+    border: 2px black solid;
+    position: relative;
+}
+
+.logo {
+    border-radius: 256px;
+    height: 48px;
+}
+
+span {
+    font-size: 40px; 
+    font-family: "Vivaldi";
+    font-weight: bolder;
+}
+
+.body {
+    padding: 20px;
+    margin: 5px;
+    border: 2px black solid;
+}
+

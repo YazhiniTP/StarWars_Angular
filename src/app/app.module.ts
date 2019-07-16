@@ -16,8 +16,12 @@ import { SpeciesService } from './species/species.service';
 import { StarshipsService } from './starship/starships.service';
 import { VehiclesService } from './vehicle/vehicles.service';
 import { PlanetsService } from './planet/planets.service';
+
 import { CharactersPipe } from './character/characters.pipes';
 import { SpeciesPipe } from './species/species.pipes';
+import { StarshipsPipe } from './starship/starships.pipes';
+import { VehiclesPipe } from './vehicle/vehicles.pipes';
+import { PlantesPipe } from './planet/planets.pipes';
 
 
 @NgModule({
@@ -26,7 +30,10 @@ import { SpeciesPipe } from './species/species.pipes';
     routingComponents,
     NavComponent,
     CharactersPipe,
-    SpeciesPipe
+    SpeciesPipe,
+    StarshipsPipe,
+    VehiclesPipe,
+    PlantesPipe
   ],
   imports: [
     BrowserModule,

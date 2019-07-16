@@ -12,5 +12,4 @@ export class SpeciesDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

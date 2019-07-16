@@ -22,7 +22,6 @@ export class SpeciesListComponent implements OnInit {
 
   constructor(private speciesservice: SpeciesService) { }
 
-  
   ngOnInit() {
     this.speciesservice.getAll().subscribe(x => {
       this.next = x['next'];
@@ -30,14 +29,6 @@ export class SpeciesListComponent implements OnInit {
       this.allSpecies = x['results']
     });
   }
-  
- 
-  /*
-  ngOnInit() {
-    this.swAPI$ = this.speciesservice.getSpecie();
-  }
-*/
-
 
   select(species) {
     this.selectedSpecies = species;
@@ -62,6 +53,7 @@ export class SpeciesListComponent implements OnInit {
       })
     }
   }
+
   goPrev() {
     if (this.prev) {
       this.speciesservice.getSpecies(this.prev).subscribe(x => {

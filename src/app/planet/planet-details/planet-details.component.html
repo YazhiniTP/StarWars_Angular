@@ -43,7 +43,9 @@
                 </tr>
                 <tr>
                     <td>Residents</td>
-                    <td>{{planet.residents}}</td>
+                    <div *ngFor="let residents of planet.residents">
+                        <td>{{residents | planetspipe}}</td>
+                    </div>
                 </tr>
                 <tr>
                     <td>Films</td>
@@ -53,19 +55,3 @@
         </mat-card-content>
     </mat-card>
 </div>
-
-<!--
-<div class="container">
-    <h3>{{planet.name | uppercase}}'s details</h3>
-    <h5>Rotation period: {{planet.rotation_period}}</h5>
-    <h5>Orbital period: {{planet.orbital_period}}</h5>
-    <h5>Diameter: {{planet.diameter}}</h5>
-    <h5>Climate: {{planet.climate}}</h5>
-    <h5>Gravity: {{planet.gravity}}</h5>
-    <h5>Terrain: {{planet.terrain}}</h5>
-    <h5>Surface water: {{planet.surface_water}}</h5>
-    <h5>Population: {{planet.population}}</h5>
-    <h5>Residents: {{planet.residents}}</h5>
-    <h5>Films: {{planet.films}}</h5>
-</div>
--->

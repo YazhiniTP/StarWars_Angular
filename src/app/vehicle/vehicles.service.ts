@@ -12,8 +12,10 @@ export class VehiclesService {
     return this.httpclient.get(this.apiUrl).pipe(map(response => response));
   }
 
-  getVehicle(url) {
-    return this.httpclient.get(url).pipe(map(response => response));
+  getVehicle(param: string) {
+    const url = param + "";
+    return this.httpclient.get(url).pipe(map(
+      (res: Response) => { return res; }
+    ));
   }
-
 }

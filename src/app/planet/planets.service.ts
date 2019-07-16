@@ -12,7 +12,10 @@ export class PlanetsService {
     return this.httpclient.get(this.apiUrl).pipe(map(response => response));
   }
 
-  getPlanet(url) {
-    return this.httpclient.get(url).pipe(map(response => response));
+  getPlanet(param: string) {
+    const url = param + "";
+    return this.httpclient.get(url).pipe(map(
+      (res: Response) => { return res; }
+    ));
   }
 }

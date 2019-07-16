@@ -12,8 +12,10 @@ export class StarshipsService {
     return this.httpclient.get(this.apiUrl).pipe(map(response => response));
   }
 
-  getStarship(url) {
-    return this.httpclient.get(url).pipe(map(response => response));
+  getStarship(param: string) {
+    const url = param + "";
+    return this.httpclient.get(url).pipe(map(
+      (res: Response) => { return res; }
+    ));
   }
-
 }

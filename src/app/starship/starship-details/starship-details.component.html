@@ -2,7 +2,7 @@
 
 <br>
 <div class="container">
-    <img [src]="'assets/starships/' + starship.name + '.jpg'" onerror="this.src='assets/no_image2.jpg';"/>
+    <img [src]="'assets/starships/' + starship.name + '.jpg'" onerror="this.src='assets/no_image2.jpg';" />
     <mat-card class="card">
         <mat-card-header>
             <mat-card-title>{{starship.name | uppercase}}'s details</mat-card-title>
@@ -59,7 +59,9 @@
                 </tr>
                 <tr>
                     <td>Pilots</td>
-                    <td>{{starship.pilots}}</td>
+                    <div *ngFor="let pilots of starship.pilots">
+                        <td>{{pilots | starshipspipe}}</td>
+                    </div>
                 </tr>
                 <tr>
                     <td>Films</td>

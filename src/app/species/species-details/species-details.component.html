@@ -2,7 +2,7 @@
 
 <br>
 <div class="container">
-    <img [src]="'assets/species/' + species.name + '.jpg'" onerror="this.src='assets/no_image2.jpg';"/>
+    <img [src]="'assets/species/' + species.name + '.jpg'" onerror="this.src='assets/no_image2.jpg';" />
     <mat-card class="card">
         <mat-card-header>
             <mat-card-title>{{species.name | uppercase}}'s details</mat-card-title>
@@ -43,7 +43,9 @@
                 </tr>
                 <tr>
                     <td>People</td>
-                    <td>{{species.people | speciespipe}}</td>
+                    <div *ngFor="let people of species.people">
+                        <td>{{people | speciespipe}}</td>
+                    </div>
                 </tr>
                 <tr>
                     <td>Films</td>

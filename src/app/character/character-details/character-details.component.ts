@@ -12,7 +12,4 @@ export class CharacterDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  
-
 }

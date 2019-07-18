@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 const MODULES = [
     MatToolbarModule,
@@ -16,7 +17,8 @@ const MODULES = [
     MatButtonModule,
     MatExpansionModule,
     MatPaginatorModule,
-    MatCardModule
+    MatCardModule,
+    MatTooltipModule
 ]
 
 @NgModule({

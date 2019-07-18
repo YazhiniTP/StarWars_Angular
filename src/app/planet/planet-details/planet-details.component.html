@@ -43,14 +43,14 @@
                 </tr>
                 <tr>
                     <td>Residents</td>
-                    <div *ngFor="let residents of planet.residents">
-                        <td>{{residents | planetspipe}}</td>
-                    </div>
+                    <td>
+                        <div *ngFor="let residents of planet.residents">{{residents | planetspipe}}</div>
+                    </td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td>Films</td>
                     <td>{{planet.films}}</td>
-                </tr>
+                </tr>-->
             </table>
         </mat-card-content>
     </mat-card>

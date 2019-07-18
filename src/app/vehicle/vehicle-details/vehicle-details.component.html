@@ -51,14 +51,14 @@
                 </tr>
                 <tr>
                     <td>Pilots</td>
-                    <div *ngFor="let pilots of vehicle.pilots">
-                        <td>{{pilots | vehiclespipe}}</td>
-                    </div>
+                    <td>
+                        <div *ngFor="let pilots of vehicle.pilots">{{pilots | vehiclespipe}}</div>
+                    </td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td>Films</td>
                     <td>{{vehicle.films}}</td>
-                </tr>
+                </tr>-->
             </table>
         </mat-card-content>
     </mat-card>

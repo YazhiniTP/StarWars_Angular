@@ -1,8 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { CharactersService } from 'src/app/character/characters.service';
+import { CharactersService } from './characters.service';
 
-@Pipe({ name: 'characterspipe', pure: false })
+@Pipe({ name: 'characterspipe', pure: false})
 
 export class CharactersPipe implements PipeTransform {
 
@@ -13,7 +13,8 @@ export class CharactersPipe implements PipeTransform {
     transform(param: string) {
         if (param) {
             this.characterservice.getCharacter(param).subscribe(res => {
-                this.result = res["name"]
+                console.log(res)
+                this.result = res["name"]             
             })
         }
         return this.result;

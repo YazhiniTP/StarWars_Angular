@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { map, mergeMap } from 'rxjs/operators';
-import { forkJoin } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class SpeciesService {
   private apiUrl = "https://swapi.co/api/species/";
-  character: any;
 
   constructor(private httpclient: HttpClient) { }
 

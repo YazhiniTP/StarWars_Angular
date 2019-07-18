@@ -15,7 +15,7 @@ export class CharacterListComponent implements OnInit {
   selectedCharacter
   character
   show: boolean = true;
-  hide: boolean = true;
+  hide: boolean = false;
 
   constructor(private characterservice: CharactersService) { }
 
@@ -33,12 +33,12 @@ export class CharacterListComponent implements OnInit {
 
   toggleShow() {
     this.show = !this.show;
-    this.hide = true;
+    this.hide = !this.hide;
   }
 
   toggleHide() {
     this.hide = !this.hide;
-    this.show = true;
+    this.show = !this.show;
   }
 
   goNext() {

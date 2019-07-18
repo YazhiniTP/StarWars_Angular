@@ -19,4 +19,10 @@ span {
     padding: 20px;
     margin: 5px;
     border: 2px black solid;
+    /*
+    background-image: url("src/assets/bg1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
 }

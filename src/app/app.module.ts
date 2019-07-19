@@ -23,7 +23,6 @@ import { StarshipsPipe } from './starship/starships.pipes';
 import { VehiclesPipe } from './vehicle/vehicles.pipes';
 import { PlantesPipe } from './planet/planets.pipes';
 
-
 @NgModule({
   declarations: [
     AppComponent,

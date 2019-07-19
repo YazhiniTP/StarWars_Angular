@@ -50,6 +50,7 @@ export class CharacterListComponent implements OnInit {
       })
     }
   }
+  
   goPrev() {
     if (this.prev) {
       this.characterservice.getCharacter(this.prev).subscribe(x => {

@@ -61,9 +61,9 @@
                 </tr>
                 <tr>
                     <td>Starships</td>
-                    <div *ngFor="let starships of character.starships">
-                        <td>{{starships | characterspipe}}</td>
-                    </div>
+                    <td>
+                        <div *ngFor="let starships of character.starships">{{starships | characterspipe}}</div>
+                    </td>
                 </tr>
             </table>
         </mat-card-content>

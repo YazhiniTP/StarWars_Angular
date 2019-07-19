@@ -12,6 +12,7 @@ export class VehiclesPipe implements PipeTransform {
     transform(param: string) {
         if (param) {
             this.vehicleservice.getVehicle(param).subscribe(res => {
+                console.log(res);
                 this.result = res["name"]
             })
         }
